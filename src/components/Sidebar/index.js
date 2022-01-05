@@ -17,21 +17,21 @@ import {
   BoxNumberRight,
   TriesBox,
   TriesBoxNumber,
-  TriesBoxText,
+  TriesBoxText
 } from "./SidebarStyle";
 import Button from "../Button/Button";
 import Select from "../Select/Select";
 
-function Sidebar({ tries, score, handleClickButton }) {
+function Sidebar({ tries, score, resetGame }) {
   const optionData = {
     title: "Option",
-    text: "Size",
+    text: "Size"
   };
   const scoreData = {
     scoreTitle: "Score",
     scoreBox: "/",
     scorenumberRight: 10,
-    triesText: "Tries: ",
+    triesText: "Tries: "
   };
 
   return (
@@ -67,7 +67,7 @@ function Sidebar({ tries, score, handleClickButton }) {
             </SelectBox>
           </SelectOptionBox>
           <BtnBox>
-            <Button handleClickButton={handleClickButton} />
+            <Button onClick={resetGame} />
           </BtnBox>
         </OptionContainer>
       </Option>

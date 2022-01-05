@@ -26,6 +26,13 @@ export const CardFront = styled.div`
   border-radius: 4px;
   cursor: pointer;
 `;
+
+export const CardPlace = styled.div`
+  display: flex;
+  width: 137px;
+  height: 145px;
+`;
+
 export const Front = styled.img`
   width: 137px;
   height: 145px;

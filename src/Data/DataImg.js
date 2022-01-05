@@ -9,87 +9,51 @@ import src8 from "../Pictures/om.jpeg";
 import src9 from "../Pictures/psg.jpeg";
 import src10 from "../Pictures/rv.jpeg";
 
-const images = [
+const pairs = [
   {
     src: src1,
-    club: "atm",
-  },
-  {
-    src: src1,
-    club: "atm",
-  },
-
-  {
-    src: src2,
-    club: "bts",
+    club: "atm"
   },
   {
     src: src2,
-    club: "bts",
+    club: "bts"
   },
   {
     src: src3,
-    club: "bvb",
-  },
-  {
-    src: src3,
-    club: "bvb",
+    club: "bvb"
   },
   {
     src: src4,
-    club: "ch",
-  },
-  {
-    src: src4,
-    club: "ch",
+    club: "ch"
   },
   {
     src: src5,
-    club: "ajax",
-  },
-  {
-    src: src5,
-    club: "ajax",
+    club: "ajax"
   },
   {
     src: src6,
-    club: "fcb",
-  },
-  {
-    src: src6,
-    club: "fcb",
+    club: "fcb"
   },
   {
     src: src7,
-    club: "mci",
-  },
-  {
-    src: src7,
-    club: "mci",
+    club: "mci"
   },
   {
     src: src8,
-    club: "om",
-  },
-  {
-    src: src8,
-    club: "om",
+    club: "om"
   },
   {
     src: src9,
-    club: "psg",
-  },
-  {
-    src: src9,
-    club: "psg",
+    club: "psg"
   },
   {
     src: src10,
-    club: "rv",
-  },
-  {
-    src: src10,
-    club: "rv",
-  },
+    club: "rv"
+  }
 ];
-export { images };
+
+export function getImages(number) {
+  const images = pairs.slice(0, number);
+
+  return [...images, ...images].map((card, i) => ({ ...card, id: i + 1 }));
+}

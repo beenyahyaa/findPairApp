@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, BtnSection } from "./ButtonStyle";
-function Button({ handleClickButton }) {
+function Button({ onClick }) {
   const buttonData = {
-    textBtn: "Restart",
+    textBtn: "Restart"
   };
   return (
     <Container>
-      <BtnSection onClick={handleClickButton}>
+      <BtnSection onClick={onClick}>
         <span>{buttonData.textBtn}</span>
       </BtnSection>
     </Container>
